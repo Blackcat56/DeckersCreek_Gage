@@ -16,8 +16,7 @@ The data source that I will be using is https://waterdata.usgs.gov/wv/nwis/curre
 
 
 ## Implementation (how you will make this happen, what tools, what code, commands etc):
-  
-
+  I will use Unix code to orginize the USGS data by using the bash function. 
 
 ## Expected Products:
 
