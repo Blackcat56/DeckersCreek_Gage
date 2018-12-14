@@ -1,3 +1,4 @@
+
 # Determining Flooding in Rivers
 
 
@@ -18,6 +19,16 @@ The data source that I will be using is https://waterdata.usgs.gov/wv/nwis/curre
 ## Implementation (how you will make this happen, what tools, what code, commands etc):
   I will use Unix code to orginize the USGS data by using the bash function. 
 
+### Example code:
+```unix 
+for gauge in "03062500"
+do
+	wget -O "$gauge".txt "https://waterdata.usgs.gov/nwis/dv?cb_00060=on&format=rdb&site_no=03062500&referred_module=sw&period=&begin_date=1946-03-03&end_date=2018-12-06"
+	sed -n '17p' "$gauge".txt >> flow.txt
+	tail -n 26577 "$gauge".txt | cut -d$'\t' -f 3,4,5>> Streamflow.csv
+done
+
+```
 ## Expected Products:
 
 The expected products are a list of all the water stream gages with their first lines as a reference, a list of the different flood stages, a list of flooding times and amounts then graphs created from that list. This will show when the flooding occurs and how high were the flood waters. The lists will help keep everything organized in case there is a problem with the code or they can be used as a reference. The graphs will be a visual aide for my master’s project and for someone wanted to know where the high flooding events were without having to search through the data. 
