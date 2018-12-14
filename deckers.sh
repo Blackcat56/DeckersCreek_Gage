@@ -1,3 +1,4 @@
+#Shell bash script
 #Decker's Creeks download
 for gauge in "03062500"
 do
@@ -5,4 +6,5 @@ do
 	sed -n '17p' "$gauge".txt >> flow.txt
 	tail -n 26577 "$gauge".txt | cut -d$'\t' -f 3,4,5>> Streamflow.csv
 done
+
 
