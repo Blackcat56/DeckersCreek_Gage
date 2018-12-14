@@ -1,10 +1,10 @@
 #Function time!
-groupF<-function(Streamflow){
-if (Streamflow==1250.0){
-   Streamflow$`Stream flow`<-NoStage  
- } else if (Streamflow$`Stream flow`=>1250.0 & <){
-   Streamflow$Rank<-ActionStage.txt
- } else if (Streamflow==Minor Flood Stage){
+groupF<-function(drpull){
+if (drpull==1250.0){
+   drpull<-NoStage.txt  
+ } else if (drpull=> 1250.0 | < 1800.0){
+   drpull<-ActionStage.txt
+ } else if (drpull=> 1800.0{
    Streamflow$Rank<- MinorStage.txt
  }else if (Streamflow==Moderate Stage){
    Streamflow$Rank<-ModerateStage.txt
