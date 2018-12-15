@@ -3,8 +3,14 @@ rm(list=ls())
 #Library list
 library(data.table)
 library(ggplot2)
+
+#This code connets the bash script to run in R 
+x<-"bash deckers.sh"
+system(x,intern = TRUE)
+
 #Reads in the csv file created from the bash decker.sh. Also makes a table from the csv. 
 Streamflow<-read.csv("Streamflow.csv",sep = "\t",header = F)
+
 #This function does alot of things to get the data 
 source("Function.R")
 
@@ -26,11 +32,10 @@ dev.off()
 
 #For looking at the rank section of the Rank section of streamflow dataset.  
 #Bar Chart
-rankF<-as.data.frame(table(Streamflow$Rank))
+rankF<-as.data.frame(table(Streamflow$Stages))
 #Takes away the no flooding stage to make any of the graphs. 
 rankF<-rankF[-c(1),]
-bp<- ggplot(rankF, aes(x="", y=Freq, fill=Var1))+
-  +     geom_bar(width = 1, stat = "identity")
+bp<- ggplot(rankF, aes(x="", y=Freq, fill=Var1)) + geom_bar(width = 1, stat = "identity")
 bp
 bp+scale_fill_brewer(palette="Dark2")
 dev.copy(jpeg,'barchart.jpeg')
