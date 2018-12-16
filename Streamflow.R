@@ -1,10 +1,11 @@
+#R code that connects the Unix code and R function to produces flood stages.
 #Deletes everything in your environment
 rm(list=ls())
 #Library list
 library(data.table)
 library(ggplot2)
 
-#This code connets the bash script to run in R 
+#This code connets the bash script to run in R by using system().
 x<-"bash deckers.sh"
 system(x,intern = TRUE)
 
@@ -19,14 +20,14 @@ source("Function.R")
 #This code creates the data frame used for the graph.
 rank<-as.data.frame(table(Streamflow$`Stream flow`))
 
-#histogram portion of the code. 
+#histogram code. 
 #These two varables determine the bar fill and bar line colors.   
 barfill<-"royalblue1"
 barlines<-"royalblue4"
 
 #This is the code to create the histogram. 
 ggplot(data=rank,aes(rank$Freq)) + geom_histogram(aes(y=..count..), color = barlines, fill = barfill) + scale_x_continuous(name="Stream Flow amounts in cfs") + scale_y_continuous("Count") + ggtitle("Frequency histogram of the Stream Flow in cfs")
-#save the chart
+#save the chart as a jpeg.
 dev.copy(jpeg,'Histogram.jpeg')
 dev.off()
 
@@ -34,14 +35,14 @@ dev.off()
 #Bar Chart
 #Creates a data frame from Streamflow dataset
 rankF<-as.data.frame(table(Streamflow$Stages))
+#Changes the column names to make it more professinal. 
 colnames(rankF)<-c("Stages", "Frequency")
 #Takes away the no flooding stage to make any of the graphs. 
 rankF<-rankF[-c(1),]
 #creates the bar chart. 
-
 bp<- ggplot(rankF, aes(x="", y=Frequency, fill=Stages)) + geom_bar(width = 1, stat = "identity")
 
-#calls the chart
+#calls the chart so it will plot. 
 bp
 #Then changes the colors of the bar chart.
 bp+scale_fill_brewer(palette="Dark2")+ggtitle("Frequency of the Flood Stages")
