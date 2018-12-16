@@ -18,7 +18,7 @@ This code finds out how many times decker's creek when into a flood stage. The f
 
 ## Data source:
 
-The data source that I will be using is https://waterdata.usgs.gov/wv/nwis/current/?type=flow&group_key=county_cd. This is the same website that we used for the Git Hub Rivers EX.  Another source that  I could use is the National Weather Service (https://water.weather.gov/ahps2/hydrograph.php?gage=dckw2&wfo=pbz) for setting the flood stages. The National Weather service has their flood stage with the flow measurements(cfs) thus I can use their stream flows to write a line in the loop to define the flood stages.  I will use the manual for the National Weather Service source as a reference when classifying flood stages.  (http://www.nws.noaa.gov/directives/sym/pd01009050curr.pdf). 
+The data source that I will be using is [this] (https://waterdata.usgs.gov/wv/nwis/current/?type=flow&group_key=county_cd). It is the same website that we used for the Git Hub Rivers EX.  Another source that  I could use is the [National Weather Service] (https://water.weather.gov/ahps2/hydrograph.php?gage=dckw2&wfo=pbz) for setting the flood stages. The National Weather service has their flood stage with the flow measurements(cfs) thus I can use their stream flows to write a line in the loop to define the flood stages.  I will use the [manual] (http://www.nws.noaa.gov/directives/sym/pd01009050curr.pdf) for the National Weather Service source as a reference when classifying flood stages.
 
 
 ## Prerequisites
@@ -36,7 +36,7 @@ done
 
 ```
 ## Products:
-The final products are a final Streamflow csv called StreamflowD.csv.The three final graphs are a histogram, bar chart and pie chart. 
+The final products are a final Streamflow csv called StreamflowD.csv. The three final graphs are a histogram, bar chart and pie chart. 
 [Histogram](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/Histogram.jpeg)
 [Bar Chart](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/barchart.jpeg)
 [Pie chart](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/PieChart.jpeg)
