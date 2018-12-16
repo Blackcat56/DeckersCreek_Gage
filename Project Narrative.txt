@@ -1,0 +1,19 @@
+Amanda Adams 
+12/16/2018
+ESDA
+Final Project: Project Narrative
+
+            Project Narrative
+	
+  A person should be able to highlight all of Streamflow.R and hit the run button. If all of the packages are installed and both the deckers.sh and Function.R are in the working directory then it will be fine.  The expected outcome is for the code to run correctly is a produced  CVS file, and three graphs as jpegs saved to  your working directory.  This narrative will explain everything in the code including the inputs, the different code and outputs. 
+
+  The R packages that are  being used in this code are data.table and ggplot2. Once they are downloaded and ran through the library function, it is time to download the data used for this code.  The bash deckers.sh function,  that is being run by R, is downloading gauge #03062500 from USGS website. The gauge data has a large warning at the beginning of the data. So I used the tail –n 26577 to get rid of the warning.  There are six columns to the data set and I only need three of them. So I used the cut function to get the date, the flow rate and the approve/provisional columns.  The data is being exported to the running directory as a CSV file to be immediately used in the next line of code.   
+	
+	Function.R cleans the data even more then the bash function. The function renames the columns from “V1","V2", and "V3" to "Date", "Stream flow", and "Tested". It then adds another column named “Stages” that categorizes the stream flow amounts to the different stages. The stages are “not in a flood stage”, action; minor, moderate, and major flood stage.  The data still has a huge gap of unknown data that could have been caused by gauge malfunction (USGS). The function uses the approve/ provisional column to omit the missing data rows. After everything, the Streamflow.csv lines go from 26577 to 14510 and all the column names get renamed and staged. 
+ 	After all the data is cleaned then the code creates plots using ggplot2 package.  To create all the graphs, I had to create variables (bp, pie , rank and rankF) to create all the graphs to get the frequencies.  The first graph is a histogram showing the frequency of the stream flow amounts. Then the second graph is a bar chart looking at the frequency of flood stages (that does not include the “not in a flood stage” stage) .  The reason I did that is shown in the histogram where due to the high amount of non-flood stages skews the results.  The third graph is a pie chart of the data from the second graph. 
+
+
+
+References:
+1. USGS. (n.d.). Current and Historical Instantaneous Data Availability. Retrieved December 15, 2018, from https://waterdata.usgs.gov/wv/nwis/?IV_data_availability
+
