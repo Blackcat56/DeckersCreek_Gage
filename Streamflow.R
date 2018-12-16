@@ -40,19 +40,19 @@ colnames(rankF)<-c("Stages", "Frequency")
 #Takes away the no flooding stage to make any of the graphs. 
 rankF<-rankF[-c(1),]
 #creates the bar chart. 
-bp<- ggplot(rankF, aes(x="", y=Frequency, fill=Stages)) + geom_bar(width = 1, stat = "identity")
+bc<- ggplot(rankF, aes(x="", y=Frequency, fill=Stages)) + geom_bar(width = 1, stat = "identity")
 
 #calls the chart so it will plot. 
-bp
+bc
 #Then changes the colors of the bar chart.
-bp+scale_fill_brewer(palette="Dark2")+ggtitle("Frequency of the Flood Stages")
+bc+scale_fill_brewer(palette="Dark2")+ggtitle("Frequency of the Flood Stages")
 #Saves the plot as a jpeg. 
 dev.copy(jpeg,'barchart.jpeg')
 dev.off()
 
 #Pie Chart
 #Creates the pie chart by calling the varible from the chart above.
-pie<-bp + coord_polar("y", start = 0)+ ggtitle("Frequency of the Flood Stages")
+pie<-bc + coord_polar("y", start = 0)+ ggtitle("Frequency of the Flood Stages")
 #calls the chart 
 pie
 
