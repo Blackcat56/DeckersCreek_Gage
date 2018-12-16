@@ -106,5 +106,5 @@ The final products are a final Streamflow csv called StreamflowD.csv. The three 
 Amanda Adams
 
 ### Acknowledgments
-* Thank you to Dr. Hessel for a challaging class. 
+* Thank you to Dr. Hessl for a challaging class. 
 * Thank you to the internet for having examples of codes that help create this code. 
