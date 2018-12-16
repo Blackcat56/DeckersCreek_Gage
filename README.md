@@ -18,7 +18,7 @@ This code finds out how many times decker's creek when into a flood stage. The f
 
 ## Data source:
 
-The data source that I will be using is [this](https://waterdata.usgs.gov/wv/nwis/current/?type=flow&group_key=county_cd). It is the same website that we used for the Git Hub Rivers EX.  Another source that  I could use is the [National Weather Service](https://water.weather.gov/ahps2/hydrograph.php?gage=dckw2&wfo=pbz) for setting the flood stages. The National Weather service has their flood stage with the flow measurements(cfs) thus I can use their stream flows to write a line in the loop to define the flood stages.  I will use the [manual](http://www.nws.noaa.gov/directives/sym/pd01009050curr.pdf) for the National Weather Service source as a reference when classifying flood stages.
+The data source that I will be using is [this](https://waterdata.usgs.gov/wv/nwis/dv?cb_00060=on&format=rdb&site_no=03062500&referred_module=sw&period=&begin_date=1946-03-01&end_date=2018-12-15). It is the same website that we used for the Git Hub Rivers EX.  Another source that  I could use is the [National Weather Service](https://water.weather.gov/ahps2/hydrograph.php?gage=dckw2&wfo=pbz) for setting the flood stages. The National Weather service has their flood stage with the flow measurements(cfs) thus I can use their stream flows to write a line in the loop to define the flood stages.  I will use the [manual](http://www.nws.noaa.gov/directives/sym/pd01009050curr.pdf) for the National Weather Service source as a reference when classifying flood stages.
 
 
 ## Prerequisites
