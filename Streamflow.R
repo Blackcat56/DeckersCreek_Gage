@@ -32,18 +32,28 @@ dev.off()
 
 #For looking at the rank section of the Rank section of streamflow dataset.  
 #Bar Chart
+#Creates a data frame from Streamflow dataset
 rankF<-as.data.frame(table(Streamflow$Stages))
 #Takes away the no flooding stage to make any of the graphs. 
 rankF<-rankF[-c(1),]
+#creates the bar chart. 
 bp<- ggplot(rankF, aes(x="", y=Freq, fill=Var1)) + geom_bar(width = 1, stat = "identity")
+#calls the chart
 bp
-bp+scale_fill_brewer(palette="Dark2")
+#Then changes the colors of the bar chart.
+bp+scale_fill_brewer(palette="Dark2")+ggtitle("Frequency of the Flood Stages")
+#Saves the plot as a jpeg. 
 dev.copy(jpeg,'barchart.jpeg')
 dev.off()
 
 #Pie Chart
-pie<-bp + coord_polar("y", start = 0)
+#Creates the pie chart by calling the varible from the chart above.
+pie<-bp + coord_polar("y", start = 0)+ ggtitle("Frequency of the Flood Stages")
+#calls the chart 
 pie
-pie + scale_fill_manual(values = c("lightyellow", "Yellow", "Orange", "Red"))
+#Changes the colors of the chart. 
+pie + scale_fill_manual(values = c("lightyellow", "Yellow", "Orange", "Red"))+ geom_text(aes(y = value/3 + c(0, cumsum(value)[-length(value)]), 
+abel = percent(value/100)), size=5)
+#saves the plot as a jpeg. 
 dev.copy(jpeg,'PieChart.jpeg')
 dev.off()
