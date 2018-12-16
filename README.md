@@ -47,7 +47,7 @@ The data source that I will be using is [this](https://waterdata.usgs.gov/wv/nwi
 * write.csv()#This produces the final csv named "StreamflowD.csv. 
 
 
-### Example Unix code:
+### Example of Unix code:
 ```unix 
 for gauge in "03062500"
 do
@@ -60,7 +60,7 @@ done
 This code is used by the bash function. 
 
 
-### Example  R code:
+### Example of R code:
 ```r 
 x<-"bash deckers.sh"
 system(x,intern = TRUE)
@@ -72,9 +72,9 @@ Streamflow<-read.csv("Streamflow.csv",sep = "\t",header = F)
 source("Function.R")
 
 ```
-This code is R code from Streamflow.R. 
+This R code is from Streamflow.R 
 
-### Example ggplot code:
+### Example of ggplot code:
 ```r 
 rankF<-as.data.frame(table(Streamflow$Stages))
 
@@ -92,7 +92,8 @@ dev.copy(jpeg,'barchart.jpeg')
 dev.off()
 
 ```
-This is the code from creating the bar chart. 
+This code creates the bar chart. 
+
 ## Products:
 The final products are a final Streamflow csv called StreamflowD.csv. The three final graphs are a histogram, bar chart and pie chart. 
 [Histogram](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/Histogram.jpeg)
