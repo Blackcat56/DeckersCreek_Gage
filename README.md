@@ -12,6 +12,9 @@ This code finds out how many times decker's creek when into a flood stage. The f
 	* Creating the different stages and conecting the stages to the dataset. 
 	* Changes the column names of the Streamflow.csv
 * The last step is creating and saving graphs from the cleaned data. 
+	* Histogram 
+	* Bar Chart
+	* Pie chart
 
 ## Data source:
 
@@ -19,8 +22,8 @@ The data source that I will be using is https://waterdata.usgs.gov/wv/nwis/curre
 
 
 ## Prerequisites
-data.table R package
-ggplot2 R package 
+* data.table R package
+* ggplot2 R package 
 
 ### Example code:
 ```unix 
@@ -33,10 +36,10 @@ done
 
 ```
 ## Products:
-
-The expected products are a list of all the water stream gages with their first lines as a reference, a list of the different flood stages, a list of flooding times and amounts then graphs created from that list. This will show when the flooding occurs and how high were the flood waters. The lists will help keep everything organized in case there is a problem with the code or they can be used as a reference. The graphs will be a visual aide for my master’s project and for someone wanted to know where the high flooding events were without having to search through the data. 
-
-
+The final products are a final Streamflow csv called StreamflowD.csv.The three final graphs are a histogram, bar chart and pie chart. 
+[Histogram](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/Histogram.jpeg)
+[Bar Chart](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/barchart.jpeg)
+[Pie chart](https://github.com/Blackcat56/Gaging_Flooding/blob/master/Output/PieChart.jpeg)
 ### Authors 
 
 Amanda Adams
