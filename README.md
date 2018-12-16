@@ -28,15 +28,15 @@ The data source that I will be using is [this](https://waterdata.usgs.gov/wv/nwi
 ### Functions
 * Library()#loads the packages need to complete this code.
 * read.csv() #reads in the produced csv created from the bash deckers.sh
-#### Unix code
+##### Unix code
 * system() #This makes it possible for R to read unix code. 
-#### Function's functions
+##### Function's functions
 * function() #Creates the function 
 * setnames() #Changes the collumn names 
 * cut() #Produces the catogories for the flood stages and creates the new column named "Stages" 
 * na.omit() #This omits any data that does not have A or P. 
 * source() #This connects the function to Streamflow.R.
-#### ggplot's functions 
+##### Ggplot's functions 
 * ggplot() #Creates the graphs/charts
 * dev.copy() #Starts the saving function and has the title of the picture produced.
 * dev.off()#This finishs the saving function of the ggplots.
