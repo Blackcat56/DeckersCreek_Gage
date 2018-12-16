@@ -43,5 +43,5 @@ Is this something that you think I can create on time? What could be added to ma
 Amanda Adams
 
 ### Acknowledgments
-*Thank you to Dr. Hessel for a challaging class. 
-*Thank you to the internet for having examples of codes that was an inspiration for this code. 
+* Thank you to Dr. Hessel for a challaging class. 
+* Thank you to the internet for having examples of codes that was an inspiration for this code. 
