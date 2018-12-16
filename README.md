@@ -82,11 +82,11 @@ colnames(rankF)<-c("Stages", "Frequency")
 
 rankF<-rankF[-c(1),]
 
-bp<- ggplot(rankF, aes(x="", y=Frequency, fill=Stages)) + geom_bar(width = 1, stat = "identity")
+bc<- ggplot(rankF, aes(x="", y=Frequency, fill=Stages)) + geom_bar(width = 1, stat = "identity")
 
-bp
+bc
 
-bp+scale_fill_brewer(palette="Dark2")+ggtitle("Frequency of the Flood Stages")
+bc+scale_fill_brewer(palette="Dark2")+ggtitle("Frequency of the Flood Stages")
 
 dev.copy(jpeg,'barchart.jpeg')
 dev.off()
