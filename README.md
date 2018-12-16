@@ -2,11 +2,11 @@
 # Determining Flood Stages in Decker's Creek
 
 * The code uses a bash command to download the Decker's Creek, 03062500, gauge data from the USGS. 
-** The output will be a csv file called Streamflow.csv.
+	* The output will be a csv file called Streamflow.csv.
 * The next step is orginizing the Streamflow data by:   
-** getting rid of any "N/A" in the data
-** Creating the different stages and conecting the stages to the dataset. 
-** Changes the column names of the Streamflow.csv
+	* getting rid of any "N/A" in the data
+	* Creating the different stages and conecting the stages to the dataset. 
+	* Changes the column names of the Streamflow.csv
 * The last step is creating charts from the cleaned data. 
 ## Data source:
 
